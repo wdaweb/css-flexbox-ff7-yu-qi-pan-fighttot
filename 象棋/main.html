@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #out {
+      width: 1200px;
+      height: 100vh;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    #boxbig {
+      width: 700px;
+      height: 800px;
+      align-self: center;
+      border: 1px solid black;
+      box-sizing: border-box;
+      position: relative;
+
+    }
+
+    #midbox {
+      margin: 30px;
+      width: calc(100% - 60px);
+      height: calc(100% - 60px);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+    }
+
+    .box2 {
+      height: 43%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box2 div {
+      border: 1px solid black;
+      width: calc(100%/8);
+      box-sizing: border-box;
+      height: calc(100%/4);
+    }
+
+    #river {
+
+      height: 14%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 40px;
+      font-family: 標楷體;
+      border: 1px solid black;
+    }
+
+    .font {
+      margin-top: 65px;
+      height: 80vh;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .font div {
+      flex-grow: 1;
+      font-size: 35px;
+      font-family: 標楷體;
+      background: white;
+    }
+
+    .a1 {
+      background-image: linear-gradient(45deg, white 0 49%, black 49% 51%, white 51% 100%);
+    }
+
+    .a2 {
+      background-image: linear-gradient(-45deg, white 0 49%, black 49% 51%, white 51% 100%);
+    }
+
+    #b1 {
+      top: 5px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #b1 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+
+    }
+
+    #c1 {
+      bottom: 5px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #c1 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+      color: red;
+    }
+
+    #b2 {
+      left: 80px;
+      top: 160px;
+      position: absolute;
+      width: 78%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #b2 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+    }
+
+
+    #c2 {
+      left: 80px;
+      top: 580px;
+      position: absolute;
+      width: 78%;
+      display: flex;
+      justify-content: space-between;
+      /* background-color: rgba(218, 92, 92, 0.5); */
+    }
+
+    #c2 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+      color: red;
+    }
+
+
+    #b3 {
+      top: 235px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #b3 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+
+    }
+
+
+    #c3 {
+      top: 495px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #c3 div {
+      border-radius: 50% 50%;
+      border: 2px solid black;
+      background: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 標楷體;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="out">
+    <div class="font">
+      <div>棋</div>
+      <div>盤</div>
+      <div>裡</div>
+      <div>，</div>
+      <div>車</div>
+      <div>無</div>
+      <div>輪</div>
+      <div>，</div>
+      <div>馬</div>
+      <div>無</div>
+      <div>韁</div>
+      <div>，</div>
+      <div>叫</div>
+      <div>聲</div>
+      <div>將</div>
+      <div>軍</div>
+      <div>提</div>
+      <div>防</div>
+      <div>提</div>
+      <div>防</div>
+    </div>
+    <div id="boxbig">
+      <div id="b1">
+        <div>車</div>
+        <div>馬</div>
+        <div>象</div>
+        <div>士</div>
+        <div>將</div>
+        <div>士</div>
+        <div>象</div>
+        <div>馬</div>
+        <div>車</div>
+      </div>
+
+      <div id="b2">
+        <div>包</div>
+        <div>包</div>
+      </div>
+
+      <div id="b3">
+        <div>卒</div>
+        <div>卒</div>
+        <div>卒</div>
+        <div>卒</div>
+        <div>卒</div>
+      </div>
+
+      <div id="c1">
+        <div>俥</div>
+        <div>傌</div>
+        <div>相</div>
+        <div>仕</div>
+        <div>帥</div>
+        <div>仕</div>
+        <div>相</div>
+        <div>傌</div>
+        <div>俥</div>
+      </div>
+
+      <div id="c2">
+        <div>炮</div>
+        <div>炮</div>
+      </div>
+
+
+      <div id="c3">
+        <div>兵</div>
+        <div>兵</div>
+        <div>兵</div>
+        <div>兵</div>
+        <div>兵</div>
+      </div>
+      <div id="midbox">
+        <div class="box2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="a1"></div>
+          <div class="a2"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="a2"></div>
+          <div class="a1"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="river">
+          <div>楚河</div>
+          <div>漢界 </div>
+        </div>
+        <div class="box2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="a1"></div>
+          <div class="a2"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="a2"></div>
+          <div class="a1"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="font">
+      <div>圖</div>
+      <div>畫</div>
+      <div>裡</div>
+      <div>，</div>
+      <div>龍</div>
+      <div>不</div>
+      <div>吟</div>
+      <div>，</div>
+      <div>虎</div>
+      <div>不</div>
+      <div>嘯</div>
+      <div>，</div>
+      <div>小</div>
+      <div>小</div>
+      <div>書</div>
+      <div>僮</div>
+      <div>可</div>
+      <div>笑</div>
+      <div>可</div>
+      <div>笑</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
